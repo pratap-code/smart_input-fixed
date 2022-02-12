@@ -103,10 +103,10 @@ void smart_input::get_input(std::string message, std::string xinp)
 					std::cout << "ERROR!!! Input at position " << (i + 1) << " not in range!" << '\n';
 					break;
 				}
-				else
+				/*else
 				{
 					std::cout << "Correct Input!! Input at position " << (i + 1) << " is in range!" << '\n';
-				}
+				}*/
 			}
 
 			// add additional result check here
@@ -118,7 +118,8 @@ void smart_input::get_input(std::string message, std::string xinp)
 			else
 			{
 				// if all the inputs are valid result is true and now return the result and also create strm for creating objects
-				std::cout << "All inputs entered are correct!" << '\n';
+				
+				//std::cout << "All inputs entered are correct!" << '\n';
 				strm = create_strm();  // creating strm for creating objects
 				//return result here
 			}		
@@ -151,7 +152,7 @@ void smart_input::get_input(std::string message, std::string xinp)
 				}
 				else 
 				{
-					std::cout << "All inputs correctly entered!" << '\n';
+					//std::cout << "All inputs correctly entered!" << '\n';
 					strm = create_strm();
 					//return result here
 				}
@@ -181,7 +182,7 @@ void smart_input::get_input(std::string message, std::string xinp)
 				}
 				else
 				{
-					std::cout << "All inputs correctly entered!" << '\n';
+					//std::cout << "All inputs correctly entered!" << '\n';
 					strm = create_strm();
 					//return result here
 				}
@@ -247,7 +248,7 @@ bool smart_input::check_num(std::string& num, char type) const
 
 					if (pos == std::string::npos) // if it doesn't exist then input is a valid int
 					{
-						std::cout << "Valid int entered!" << '\n';
+						//std::cout << "Valid int entered!" << '\n';
 						return true;
 					}
 					else  // if it does exist then pos wil be non zero and hence multiple -ve signs exist!
@@ -265,7 +266,7 @@ bool smart_input::check_num(std::string& num, char type) const
 			}
 			else    // if the sign doesn't exist then valid int
 			{
-				std::cout << "Valid Int entered!" << '\n';
+				//std::cout << "Valid Int entered!" << '\n';
 				return true;
 			}
 
@@ -286,7 +287,7 @@ bool smart_input::check_num(std::string& num, char type) const
 
 			if (pos_dot == std::string::npos && pos_sign == std::string::npos)  // if neither the -ve sign nor the dot exist then valid
 			{
-				std::cout << "Valid double entered!" << '\n';
+				//std::cout << "Valid double entered!" << '\n';
 				return true;
 			}
 			else if (pos_dot == std::string::npos && pos_sign != std::string::npos)  // if dot doesn't exists but sign exists
@@ -297,7 +298,7 @@ bool smart_input::check_num(std::string& num, char type) const
 
 					if (pos_sign == std::string::npos)  // if no more -ve sign exists then valid
 					{
-						std::cout << "Valid double entered!" << '\n';
+						//std::cout << "Valid double entered!" << '\n';
 						return true;
 					}
 					else  // atleast 2 -ve signs exist when pos_sign is not npos
@@ -324,7 +325,7 @@ bool smart_input::check_num(std::string& num, char type) const
 
 				if (pos_dot == std::string::npos) // if only one . exists then valid
 				{
-					std::cout << "Valid double entered!" << '\n';
+					//std::cout << "Valid double entered!" << '\n';
 					return true;
 				}
 				else // multiple dots exist so invalid
@@ -351,7 +352,7 @@ bool smart_input::check_num(std::string& num, char type) const
 
 						if (pos_dot == std::string::npos)  // if another dot doesn't exist then valid
 						{
-							std::cout << "Valid double entered!" << '\n';
+							//std::cout << "Valid double entered!" << '\n';
 							return true;
 						}
 						else  // another dot exists
@@ -526,7 +527,7 @@ std::stringstream smart_input::create_strm() const
 
 	}
 
-	std::cout << "stringstream successfully created!\n" << tmp.str() << '\n';
+	//std::cout << "stringstream successfully created!\n" << tmp.str() << '\n';
 
 	return tmp;
 

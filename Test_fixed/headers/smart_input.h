@@ -111,7 +111,7 @@ bool smart_input::compare(char& lb, char& rb, std::vector<T>& vec, T& val) const
 {
 	if (lb == '(' && rb == ')')
 	{
-		std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
+		//std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
 		if (vec.front() < val && val < vec.back())
 			return true;
 		else
@@ -119,7 +119,7 @@ bool smart_input::compare(char& lb, char& rb, std::vector<T>& vec, T& val) const
 	}
 	else if (lb == '(' && rb == ']')
 	{
-		std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
+		//std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
 		if (vec.front() < val && val <= vec.back())
 			return true;
 		else
@@ -127,7 +127,7 @@ bool smart_input::compare(char& lb, char& rb, std::vector<T>& vec, T& val) const
 	}
 	else if (lb == '[' && rb == ')')
 	{
-		std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
+		//std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
 		if (vec.front() <= val && val < vec.back())
 			return true;
 		else
@@ -135,7 +135,7 @@ bool smart_input::compare(char& lb, char& rb, std::vector<T>& vec, T& val) const
 	}
 	else if (lb == '[' && rb == ']')
 	{
-		std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
+		//std::cout << "Comparing {" << val << "} to " << "{" << vec.front() << "} " << " & {" << vec.back() << "} " << '\n';
 		if (vec.front() <= val && val <= vec.back())
 			return true;
 		else
@@ -146,7 +146,7 @@ bool smart_input::compare(char& lb, char& rb, std::vector<T>& vec, T& val) const
 
 		for (size_t i = 0; i < vec.size(); ++i)  // comparing to each of the values here for {}
 		{
-			std::cout << "Comparing {" << val << "} to " << "{ " << vec[i] << "} " << '\n';
+			//std::cout << "Comparing {" << val << "} to " << "{ " << vec[i] << "} " << '\n';
 			if (val == vec[i])
 				return true;
 		}
